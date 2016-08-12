@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TweetBox from "./TweetBox";
+import TweetBox from "./components/TweetBox";
+import TweetBoxContainer from "./containers/TweetBoxContainer"
 class App extends Component {
   render() {
     return (
@@ -13,8 +14,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-          <TweetBox titulo="Reload Teste"/>
-          <TweetBox titulo="Outro Teste"/>
+          <TweetBoxContainer titulo="Reload Teste"/>
 
       </div>
     );
