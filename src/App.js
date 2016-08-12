@@ -3,7 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import TweetBox from "./components/TweetBox";
 import TweetBoxContainer from "./containers/TweetBoxContainer"
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+
+
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -14,11 +19,18 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-          <TweetBoxContainer titulo="Reload Teste"/>
-
+        <TweetBoxContainer titulo="Reload Teste"/>
+        {(!this.props.tweet.fetching) ? this.props.tweet.ultimoTweet : "Carregando..."}
       </div>
     );
   }
 }
 
-export default App;
+
+function mapStateToProps(state) {
+    return {
+        tweet: state.tweet
+    };
+}
+
+export default connect(mapStateToProps)(App);
