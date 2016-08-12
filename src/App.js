@@ -20,7 +20,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <TweetBoxContainer titulo="Reload Teste"/>
-        {(!this.props.tweet.fetching) ? this.props.tweet.ultimoTweet : "Carregando..."}
+        {(!this.props.tweet.fetching) ? this.props.tweet.lastTweet : "Carregando..."}
       </div>
     );
   }

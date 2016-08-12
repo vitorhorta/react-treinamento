@@ -1,4 +1,4 @@
-export default function(state = {text: "",isPhotoAdded: false,ultimoTweet: "", fetching: false}, action) {
+export default function(state = {text: "",isPhotoAdded: false,lastTweet: "", fetching: false}, action) {
     console.log("teste");
     switch (action.type) {
         case "TEXT_CHANGED":
@@ -8,7 +8,7 @@ export default function(state = {text: "",isPhotoAdded: false,ultimoTweet: "", f
             state = {...state, isPhotoAdded: action.payload}
             break;
         case "FETCH_TWEETS_FULFILLED":
-            state = {...state, ultimoTweet: action.payload,fetching: false}
+            state = {...state, lastTweet: action.payload,fetching: false}
             break;
         case "FETCH_TWEETS":
             state = {...state, fetching: true}

@@ -21,7 +21,7 @@ export const addedPhoto = (addedPhoto) => {
     }
 }
 
-export const enviarTweet = (text) => {
+export const sendTweet = (text) => {
   return function (dispatch){
     dispatch({type: "FETCH_TWEETS",payload: null})
 
