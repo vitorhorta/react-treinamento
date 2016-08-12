@@ -1,1 +1,1 @@
-Sample project for teaching and studying React with Redux
+Sample project for teaching and learning React with Redux
