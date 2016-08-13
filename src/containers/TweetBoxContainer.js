@@ -8,9 +8,7 @@ class TweetBoxContainer extends Component {
 
     render() {
         return (
-            <div className="well clearfix">
-                <TweetBox text={this.props.text} isPhotoAdded={this.props.isPhotoAdded} changeText={this.props.changeText} addedPhoto={this.props.addedPhoto} sendTweet={this.props.sendTweet} />
-            </div>
+            <TweetBox text={this.props.text} isPhotoAdded={this.props.isPhotoAdded} changeText={this.props.changeText} addedPhoto={this.props.addedPhoto} sendTweet={this.props.sendTweet} />
         );
     }
 }
