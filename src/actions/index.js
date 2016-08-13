@@ -22,12 +22,8 @@ export const addedPhoto = (addedPhoto) => {
 }
 
 export const sendTweet = (text) => {
-  return function (dispatch){
-    dispatch({type: "FETCH_TWEETS",payload: null})
-
-    axios.get("http://rest.learncode.academy/api/test123/tweets")
-      .then((response) => {
-        dispatch({type: "FETCH_TWEETS_FULFILLED",payload: response.data[0].text})
-      })
-  }
+    return {
+        type: "TWEET_SENT",
+        payload: text
+    }
 }
