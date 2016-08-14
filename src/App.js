@@ -10,12 +10,15 @@ import {connect} from 'react-redux';
 
 
 class App extends Component {
-
+  getLastTweet() {
+    var text = 'My Last Tweet:  ' + this.props.tweet.lastTweet;
+    return <h4>{text}</h4>;
+  }
   render() {
     return (
       <div className="App">
         <TweetBoxContainer />
-        {this.props.tweet.lastTweet}
+        {(this.props.tweet.lastTweet) ? this.getLastTweet() : null}
         <DebugBoxContainer />
       </div>
     );
