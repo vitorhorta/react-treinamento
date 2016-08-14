@@ -7,10 +7,12 @@ export const selectUser = (user) => {
     }
 }
 
-export const changeText = (text) => {
+export const changeText = (text,viewString) => {
     return {
         type: "TEXT_CHANGED",
-        payload: text
+        payload: text,
+        viewString: viewString,
+        actionString: changeText
     }
 }
 
