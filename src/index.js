@@ -6,8 +6,6 @@ import {applyMiddleware,createStore} from 'redux';
 import allReducers from './reducers';
 import {Provider} from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
-
-import Layout from './components/Layout';
 import createLogger from 'redux-logger';
 
 

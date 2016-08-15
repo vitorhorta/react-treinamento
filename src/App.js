@@ -4,7 +4,7 @@ import './App.css';
 import TweetBox from "./components/TweetBox";
 import TweetBoxContainer from "./containers/TweetBoxContainer"
 import DebugBoxContainer from "./containers/DebugBoxContainer"
-
+import ProductsTableContainer from "./containers/ProductsTableContainer";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
@@ -20,6 +20,7 @@ class App extends Component {
         <TweetBoxContainer />
         {(this.props.tweet.lastTweet) ? this.getLastTweet() : null}
         <DebugBoxContainer />
+        <ProductsTableContainer />
       </div>
     );
   }

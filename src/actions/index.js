@@ -29,3 +29,14 @@ export const sendTweet = (text) => {
         payload: text
     }
 }
+
+export const fetchProducts = (text) => {
+  return function (dispatch){
+    dispatch({type: "FETCH_PRODUCTS",payload: null})
+
+    axios.get("http://rest.learncode.academy/api/vhorta/products")
+      .then((response) => {
+        dispatch({type: "FETCH_PRODUCTS_FULFILLED",payload: response.data})
+      })
+  }
+}
