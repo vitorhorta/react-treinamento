@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TweetBox from "../components/TweetBox"
+import TweetBox from "../components/TweetBox";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {changeText,addedPhoto,sendTweet} from '../actions/index';

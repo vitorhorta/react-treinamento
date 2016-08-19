@@ -30,9 +30,9 @@ export const sendTweet = (text) => {
     }
 }
 
-export const removeTweet = (text) => {
+export const removeTweet = (id) => {
     return {
         type: "TWEET_REMOVED",
-        payload: text
+        payload: id
     }
 }
