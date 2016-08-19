@@ -17,7 +17,7 @@ function mapStateToProps(state) {
     return {
       text: state.tweet.text,
       isPhotoAdded: state.tweet.isPhotoAdded,
-      ultimoTweet: state.tweet.ultimoTweet
+      tweets: state.tweet.tweets
     };
 }
 
