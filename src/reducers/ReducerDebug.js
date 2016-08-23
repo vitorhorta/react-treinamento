@@ -9,6 +9,9 @@ export default function(state = {}, action) {
         case "TWEET_SENT":
             state = {...state, view: "TweetBox",viewMethod: "submitClicked",actionMethod: "sendTweet",reducerCase: "TWEET_SENT"}
             break;
+         case "TWEET_REMOVED":
+            state = {...state, view: "TweetBox",viewMethod: "removeClicked",actionMethod: "removeTweet",reducerCase: "TWEET_REMOVED"}
+            break;
     }
     return state;
 }

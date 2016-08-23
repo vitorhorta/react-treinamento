@@ -29,3 +29,10 @@ export const sendTweet = (text) => {
         payload: text
     }
 }
+
+export const removeTweet = (id) => {
+    return {
+        type: "TWEET_REMOVED",
+        payload: id
+    }
+}
