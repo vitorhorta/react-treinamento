@@ -22,7 +22,7 @@ function mapStateToProps(state) {
       text: state.tweet.text,
       isPhotoAdded: state.tweet.isPhotoAdded,
       ultimoTweet: state.tweet.ultimoTweet,
-      products: state.products
+      products: state.products,
       tweets: state.tweet.tweets
     };
 }
