@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TweetBox from "../components/TweetBox"
+import TweetBox from "../components/TweetBox";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {changeText,addedPhoto,sendTweet,fetchProducts} from '../actions/index';
@@ -23,6 +23,7 @@ function mapStateToProps(state) {
       isPhotoAdded: state.tweet.isPhotoAdded,
       ultimoTweet: state.tweet.ultimoTweet,
       products: state.products
+      tweets: state.tweet.tweets
     };
 }
 

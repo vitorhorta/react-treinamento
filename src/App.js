@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TweetBox from "./components/TweetBox";
+import Tweet from "./components/Tweet";
 import TweetBoxContainer from "./containers/TweetBoxContainer"
 import DebugBoxContainer from "./containers/DebugBoxContainer"
 import ProductsTableContainer from "./containers/ProductsTableContainer";
@@ -10,15 +11,16 @@ import {connect} from 'react-redux';
 
 
 class App extends Component {
-  getLastTweet() {
-    var text = 'My Last Tweet:  ' + this.props.tweet.lastTweet;
-    return <h4>{text}</h4>;
-  }
+
   render() {
+    const tweets = this.props.tweet.tweets.map(function(tweet) {
+          return <Tweet text={tweet.text} id={tweet.id}></Tweet>;
+    })
+
     return (
       <div className="App">
         <TweetBoxContainer />
-        {(this.props.tweet.lastTweet) ? this.getLastTweet() : null}
+        {(this.props.tweet.tweets.length) ? tweets : null}
         <DebugBoxContainer />
         <ProductsTableContainer />
       </div>
