@@ -22,8 +22,8 @@ class TweetBox extends Component {
 
     submitClicked(e){
         if(this.getRemainingChars() > 0){
-            this.props.sendTweet(this.props.text);
             this.props.changeText('');
+            this.props.sendTweet(this.props.text);
         }
 
         ReactDOM.findDOMNode(this.refs.twitTextarea).focus();     
