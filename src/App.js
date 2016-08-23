@@ -22,7 +22,6 @@ class App extends Component {
         <TweetBoxContainer />
         {(this.props.tweet.tweets.length) ? tweets : null}
         <DebugBoxContainer />
-        <ProductsTableContainer />
       </div>
     );
   }
